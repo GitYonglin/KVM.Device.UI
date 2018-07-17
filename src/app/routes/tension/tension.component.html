@@ -1,0 +1,10 @@
+<input type="number" name="msg" [(ngModel)]="msg">
+<!-- <button (click)="PLC()" nz-button>PLC</button>
+<button (click)="stop()" nz-button>Stop</button> -->
+<button (click)="F05(1, 1280, true)" nz-button>OnY0</button>
+<button (click)="F05(1, 1280, false)" nz-button>OffY0</button>
+<button (click)="F05(2, 1280, true)" nz-button>从OnY0</button>
+<button (click)="F05(2, 1280, false)" nz-button>从OffY0</button>
+<button (click)="F01(1, 1280, 20)" nz-button>F01</button>
+<button (click)="Test()" nz-button>Test</button>
+<h1>{{messages}}</h1>
