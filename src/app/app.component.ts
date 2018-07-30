@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { MSService } from './services/MS.service';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,11 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   constructor(
+    private _ms: MSService
   ) {
   }
 
   ngOnInit() {
+    this._ms.creation();
   }
 }

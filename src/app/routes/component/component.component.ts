@@ -6,7 +6,7 @@ import { setFromValue } from '../../utils/form/construct-form';
 import { getFormData, upDataFormData } from '../../utils/form/constructor-FormData';
 import { constructFormData, holeFormData } from './form.data';
 import { ModalFormDataComponent } from '../../shared/form/modal-form-data/modal-form-data.component';
-import { ActivatedRoute } from 'node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({

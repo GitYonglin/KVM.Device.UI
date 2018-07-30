@@ -7,7 +7,7 @@ import { newFormData, upDataFormData } from '../../utils/form/constructor-FormDa
 import { LeftMenuComponent } from '../../shared/left-menu/left-menu.component';
 import { setFromValue } from '../../utils/form/construct-form';
 import { ModalFormDataComponent } from '../../shared/form/modal-form-data/modal-form-data.component';
-import { ActivatedRoute } from 'node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({

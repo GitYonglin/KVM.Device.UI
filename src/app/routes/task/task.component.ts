@@ -11,7 +11,7 @@ import { ManualGroupComponent } from './manual-group/manual-group.component';
 import { SelectSteelStrandComponent } from './select-steel-strand/select-steel-strand.component';
 import { GroupTaskDataComponent } from './group-task-data/group-task-data.component';
 import { AppService } from '../app.service';
-import { ActivatedRoute, NavigationStart } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute, NavigationStart } from '@angular/router';
 import { Router } from '@angular/router';
 
 const baseUri = '/task';

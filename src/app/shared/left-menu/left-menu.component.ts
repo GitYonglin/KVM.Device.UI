@@ -3,6 +3,7 @@ import { listAnim } from '../../animas/list.anim';
 import { APIService } from '../../services/api.service';
 import { Router } from '@angular/router';
 import { AppService } from '../../routes/app.service';
+import { MSService } from '../../services/MS.service';
 
 @Component({
   selector: 'app-left-menu',
@@ -20,6 +21,8 @@ export class LeftMenuComponent implements OnInit {
   menuDataState = false;
   operationState = false;
   componentId = null;
+  deviceLinkZ = '主站';
+  deviceLinkC = '从站';
 
   @Input() disabledState = false;
   @Output() operation = new EventEmitter<string>();
@@ -29,11 +32,14 @@ export class LeftMenuComponent implements OnInit {
     private _service: APIService,
     private _router: Router,
     private _appService: AppService,
+    public _ms: MSService
   ) { }
 
   ngOnInit() {
     this.menuDataState = false;
     this.getMenuData();
+    this.deviceLinkZ = this._ms.deviceLinkZ;
+    this.deviceLinkC = this._ms.deviceLinkC;
   }
 
   getMenuData() {

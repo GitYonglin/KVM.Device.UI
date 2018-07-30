@@ -10,6 +10,7 @@ export class WorkModeComponent implements OnInit {
   imgFile: File;
   isVisible = false;
   workMode = ['a1', 'a2', 'b1', 'b2'];
+  correctionName = null;
 
   @Input()
   labelSpan = 4;
@@ -21,10 +22,8 @@ export class WorkModeComponent implements OnInit {
   formTypes: any;
   @Input()
   formClass = '';
-  @Input()
-  correctionBtn = false;
+
   constructor() { }
 
   ngOnInit() {}
-
 }

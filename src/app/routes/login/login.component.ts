@@ -1,8 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { loginFormData } from './form.data';
 import { FormGroup } from '@angular/forms';
 import { APIService } from '../../services/api.service';
+import { FullMenuComponent } from '../../shared/full-menu/full-menu.component';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,9 @@ import { APIService } from '../../services/api.service';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
+  @ViewChild(FullMenuComponent)
+    private fullMenu: FullMenuComponent;
+
   formGroup: FormGroup;
   formTypes: any;
   projectList: any;
@@ -67,7 +71,7 @@ export class LoginComponent implements OnInit {
   }
   login() {
     console.log('222');
-    this.post('login');
+    this.post(`/user/login/${JSON.parse(localStorage.getItem('project')).id}`);
   }
 
   post(url) {
@@ -94,7 +98,7 @@ export class LoginComponent implements OnInit {
               // sessionStorage.setItem('project', JSON.stringify(this.selectProject));
               sessionStorage.setItem('user', JSON.stringify(value));
               this._service.showMessage('success', '登录成功');
-              this.menuIsVisible = true;
+              this.fullMenu.showModal();
             } else {
               this._service.showMessage('error', '登录失败');
             }

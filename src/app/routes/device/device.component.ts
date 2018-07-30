@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 import { APIService } from '../../services/api.service';
 import { newFormData, upDataFormData } from '../../utils/form/constructor-FormData';
 import { constructFormData, setFormValue } from './form.data';
-import { ActivatedRoute } from 'node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AppService } from '../app.service';
 
 const baseUri = '/device';
@@ -30,7 +30,7 @@ export class DeviceComponent implements OnInit {
   constructor(
     private _servers: APIService,
     private _activatedRoute: ActivatedRoute,
-    private _appService: AppService,
+    public _appService: AppService,
   ) { }
 
   ngOnInit() {

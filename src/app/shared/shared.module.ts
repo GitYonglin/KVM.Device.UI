@@ -12,6 +12,9 @@ import { FormUpImgComponent } from './form/form-up-img/form-up-img.component';
 import { ModalFormDataComponent } from './form/modal-form-data/modal-form-data.component';
 import { ChildrenFormComponent } from './form/children-form/children-form.component';
 import { InTagComponent } from './form/in-tag/in-tag.component';
+import { ManualComponent } from '../routes/manual/manual.component';
+import { DeviceItemComponent } from '../routes/manual/device-item/device-item.component';
+import { MenuButtonComponent } from './menu-button/menu-button.component';
 
 const imports = [
   CommonModule,
@@ -20,8 +23,11 @@ const imports = [
   ReactiveFormsModule,
 ];
 const declarations = [
+  DeviceItemComponent,
+  ManualComponent,
   FullMenuComponent,
   LeftMenuComponent,
+  MenuButtonComponent,
   FormUpImgComponent,
   ModalFormDataComponent,
   ChildrenFormComponent,

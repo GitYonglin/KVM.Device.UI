@@ -96,3 +96,26 @@ td {
     font-size: 8px;
   }
 }
+
+.input-col {
+  display: flex;
+  nz-slider {
+    width: 300%;
+    margin-right: 7px;
+    .ant-slider {
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
+    .ant-slider-track,
+    .ant-slider-rail{
+      height: 32px;
+    }
+    // nz-tooltip{
+      .ant-slider-handle {
+        height: 32px;
+        margin-top: 0;
+      }
+    // }
+  }
+}
